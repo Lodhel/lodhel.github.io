@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
-import AppNavbar from './components/AppNavbar.vue'
-import AppFooter from '@/components/AppFooter.vue'
+import AppFooter from '@/components/layout/AppFooter.vue'
+import AppHeader from '@/components/layout/AppHeader.vue'
+import HomeView from '@/views/HomeView.vue'
 </script>
 
 <template>
-  <AppNavbar />
-  <RouterView />
-  <AppFooter />
+  <div class="site-shell">
+    <AppHeader />
+    <HomeView />
+    <AppFooter />
+  </div>
 </template>
