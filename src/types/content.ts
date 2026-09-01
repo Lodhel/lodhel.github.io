@@ -23,6 +23,7 @@ export interface Achievement {
   result: string
   year: string
   description: string
+  organizers?: string
   certificateImage?: string
   externalUrl?: string
 }

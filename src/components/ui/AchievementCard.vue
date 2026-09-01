@@ -38,6 +38,9 @@ const isPdf = computed(() => props.achievement.certificateImage?.toLowerCase().i
       </div>
       <h3 class="card-title">{{ achievement.title }}</h3>
       <p class="achievement-card__event">{{ achievement.event }}</p>
+      <p v-if="achievement.organizers" class="achievement-card__organizers">
+        {{ achievement.organizers }}
+      </p>
       <p>{{ achievement.description }}</p>
       <a
         v-if="achievement.externalUrl"
@@ -163,6 +166,12 @@ const isPdf = computed(() => props.achievement.certificateImage?.toLowerCase().i
   margin: 8px 0 0 !important;
   color: var(--text) !important;
   font-size: 0.78rem;
+  font-weight: 600;
+}
+.achievement-card__organizers {
+  margin: 6px 0 0;
+  color: var(--accent);
+  font-size: 0.72rem;
   font-weight: 600;
 }
 .achievement-card__content > p:last-of-type {
