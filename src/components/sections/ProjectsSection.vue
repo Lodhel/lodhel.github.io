@@ -5,7 +5,7 @@ import SectionTitle from '@/components/ui/SectionTitle.vue'
 </script>
 
 <template>
-  <section id="projects" class="section">
+  <section id="projects" class="section decorated-section decorated-section--mint">
     <div v-reveal class="container">
       <SectionTitle
         eyebrow="Selected work"

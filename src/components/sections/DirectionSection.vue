@@ -1,5 +1,8 @@
 <template>
-  <section v-reveal class="section direction">
+  <section
+    v-reveal
+    class="section direction decorated-section decorated-section--mint decorated-section--reverse"
+  >
     <div class="direction__panel container">
       <div>
         <p class="eyebrow">Next layer</p>

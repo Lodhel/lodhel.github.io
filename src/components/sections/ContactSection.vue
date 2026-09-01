@@ -3,7 +3,7 @@ import SocialLinks from '@/components/ui/SocialLinks.vue'
 </script>
 
 <template>
-  <section id="contacts" class="section contact">
+  <section id="contacts" class="section contact decorated-section decorated-section--reverse">
     <div v-reveal class="contact__inner container">
       <div>
         <p class="eyebrow">Contact</p>
@@ -23,7 +23,6 @@ import SocialLinks from '@/components/ui/SocialLinks.vue'
 <style scoped>
 .contact {
   border-top: 1px solid var(--line);
-  background: linear-gradient(180deg, var(--bg), #0c1217);
 }
 .contact__inner {
   display: grid;

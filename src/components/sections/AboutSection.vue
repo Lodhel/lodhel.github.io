@@ -4,7 +4,7 @@ import SectionTitle from '@/components/ui/SectionTitle.vue'
 </script>
 
 <template>
-  <section id="about" v-reveal class="section">
+  <section id="about" v-reveal class="section decorated-section">
     <div class="about container">
       <SectionTitle eyebrow="Профиль" title="Обо мне" />
       <div class="about__content">

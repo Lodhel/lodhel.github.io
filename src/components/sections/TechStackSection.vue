@@ -4,7 +4,7 @@ import SectionTitle from '@/components/ui/SectionTitle.vue'
 </script>
 
 <template>
-  <section class="section section--compact tech-stack">
+  <section class="section section--compact tech-stack decorated-section decorated-section--violet">
     <div v-reveal class="container">
       <SectionTitle eyebrow="Toolbox" title="Технологии" />
       <div class="tech-stack__grid">

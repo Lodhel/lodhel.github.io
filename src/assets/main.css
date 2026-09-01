@@ -113,6 +113,83 @@ svg {
   border-block: 1px solid var(--line);
 }
 
+.decorated-section {
+  --decor-pattern-opacity: 0.14;
+  --decor-pattern-position: center;
+  --decor-pattern-size: max(112%, 1180px) auto;
+  --decor-pattern-transform: scaleX(1);
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 82% 26%, rgba(55, 111, 195, 0.16), transparent 30rem),
+    radial-gradient(circle at 12% 82%, rgba(74, 174, 148, 0.08), transparent 25rem),
+    linear-gradient(135deg, #071016 0%, #0a1420 42%, #101125 74%, #080c12 100%);
+}
+
+.decorated-section::before,
+.decorated-section::after {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  content: '';
+  pointer-events: none;
+}
+
+.decorated-section::before {
+  inset: -5%;
+  background-image: url('./tech-pattern.svg');
+  background-position: var(--decor-pattern-position);
+  background-repeat: repeat-y;
+  background-size: var(--decor-pattern-size);
+  opacity: var(--decor-pattern-opacity);
+  transform: var(--decor-pattern-transform);
+}
+
+.decorated-section::after {
+  background: linear-gradient(90deg, rgba(7, 13, 19, 0.27), transparent 52%, rgba(8, 12, 18, 0.12)),
+    linear-gradient(180deg, rgba(7, 12, 17, 0.08), transparent 40%, rgba(8, 12, 16, 0.28));
+}
+
+.decorated-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.decorated-section--hero {
+  --decor-pattern-opacity: 0.19;
+  background: radial-gradient(circle at 78% 34%, rgba(84, 96, 211, 0.2), transparent 31rem),
+    radial-gradient(circle at 16% 15%, rgba(47, 132, 170, 0.15), transparent 26rem),
+    linear-gradient(135deg, #071016 0%, #0a1420 38%, #101125 70%, #080c12 100%);
+}
+
+.decorated-section--violet {
+  --decor-pattern-position: 62% 52%;
+  --decor-pattern-transform: scaleX(-1);
+  background: radial-gradient(circle at 16% 28%, rgba(70, 101, 194, 0.13), transparent 28rem),
+    radial-gradient(circle at 88% 72%, rgba(122, 77, 194, 0.15), transparent 31rem),
+    linear-gradient(145deg, #080e16, #101326 54%, #0d0e1b 100%);
+}
+
+.decorated-section--mint {
+  --decor-pattern-opacity: 0.12;
+  --decor-pattern-position: 42% 48%;
+  background: radial-gradient(circle at 84% 24%, rgba(49, 150, 159, 0.13), transparent 29rem),
+    radial-gradient(circle at 11% 78%, rgba(67, 113, 201, 0.11), transparent 27rem),
+    linear-gradient(130deg, #071015, #0b1820 48%, #0d1220 100%);
+}
+
+.decorated-section--compact {
+  --decor-pattern-opacity: 0.1;
+  --decor-pattern-position: center 48%;
+  --decor-pattern-size: max(108%, 1120px) auto;
+  background: radial-gradient(circle at 76% 50%, rgba(89, 83, 187, 0.13), transparent 25rem),
+    linear-gradient(110deg, #091118, #0d1420 58%, #10101e);
+}
+
+.decorated-section--reverse {
+  --decor-pattern-position: 68% 50%;
+  --decor-pattern-transform: scaleX(-1);
+}
+
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -260,6 +337,17 @@ svg {
   }
   .button {
     min-height: 46px;
+  }
+  .decorated-section {
+    --decor-pattern-opacity: 0.1;
+    --decor-pattern-position: 58% center;
+    --decor-pattern-size: max(156%, 1080px) auto;
+  }
+  .decorated-section--hero {
+    --decor-pattern-opacity: 0.12;
+  }
+  .decorated-section--compact {
+    --decor-pattern-opacity: 0.075;
   }
 }
 

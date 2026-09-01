@@ -10,7 +10,10 @@ const selectedAchievement = ref<Achievement | null>(null)
 </script>
 
 <template>
-  <section id="achievements" class="section">
+  <section
+    id="achievements"
+    class="section decorated-section decorated-section--violet decorated-section--reverse"
+  >
     <div v-reveal class="container">
       <SectionTitle
         eyebrow="Recognition"

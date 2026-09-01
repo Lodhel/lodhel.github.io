@@ -4,7 +4,7 @@ import SectionTitle from '@/components/ui/SectionTitle.vue'
 </script>
 
 <template>
-  <section id="focus" class="section focus">
+  <section id="focus" class="section focus decorated-section">
     <div v-reveal class="container">
       <div class="focus__head">
         <SectionTitle
@@ -29,7 +29,6 @@ import SectionTitle from '@/components/ui/SectionTitle.vue'
 <style scoped>
 .focus {
   border-block: 1px solid var(--line);
-  background: var(--bg-soft);
 }
 .focus__head {
   display: flex;

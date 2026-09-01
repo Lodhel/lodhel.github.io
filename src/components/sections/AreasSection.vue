@@ -4,7 +4,7 @@ import SectionTitle from '@/components/ui/SectionTitle.vue'
 </script>
 
 <template>
-  <section id="areas" class="section areas">
+  <section id="areas" class="section areas decorated-section decorated-section--violet">
     <div v-reveal class="container">
       <SectionTitle
         eyebrow="Практика"
@@ -32,7 +32,6 @@ import SectionTitle from '@/components/ui/SectionTitle.vue'
 <style scoped>
 .areas {
   border-block: 1px solid var(--line);
-  background: var(--bg-soft);
 }
 .areas__list {
   border-top: 1px solid var(--line-strong);

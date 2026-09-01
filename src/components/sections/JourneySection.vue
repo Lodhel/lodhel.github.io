@@ -12,7 +12,7 @@ const steps = [
 </script>
 
 <template>
-  <section class="section journey">
+  <section class="section journey decorated-section decorated-section--reverse">
     <div v-reveal class="container">
       <SectionTitle eyebrow="Trajectory" title="Мой инженерный путь" />
       <div class="journey__panel">
@@ -40,19 +40,7 @@ const steps = [
 
 <style scoped>
 .journey {
-  overflow: hidden;
   border-block: 1px solid var(--line);
-  background: #0b1015;
-}
-.journey::before {
-  position: absolute;
-  top: -180px;
-  right: -100px;
-  width: 480px;
-  height: 480px;
-  border: 1px solid rgba(143, 227, 194, 0.07);
-  border-radius: 50%;
-  content: '';
 }
 .journey__panel {
   display: grid;

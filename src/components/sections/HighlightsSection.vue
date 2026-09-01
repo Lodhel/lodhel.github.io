@@ -3,7 +3,10 @@ import { highlights } from '@/data/technologies'
 </script>
 
 <template>
-  <section class="highlights section--bordered" aria-label="Ключевые направления">
+  <section
+    class="highlights section--bordered decorated-section decorated-section--compact"
+    aria-label="Ключевые направления"
+  >
     <div class="highlights__grid container">
       <article v-for="(item, index) in highlights" :key="item.title" class="highlight">
         <span>0{{ index + 1 }}</span>
@@ -17,9 +20,6 @@ import { highlights } from '@/data/technologies'
 </template>
 
 <style scoped>
-.highlights {
-  background: rgba(13, 17, 23, 0.62);
-}
 .highlights__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
