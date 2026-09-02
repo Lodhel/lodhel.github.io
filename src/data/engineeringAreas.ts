@@ -40,7 +40,7 @@ export const engineeringAreas = [
         ]
       },
       {
-        title: 'Фоновые задачи и messaging',
+        title: 'Фоновые задачи',
         technologies: [
           'Celery',
           'Kafka'
@@ -58,7 +58,7 @@ export const engineeringAreas = [
   {
     number: '02',
     level: 'Инфраструктура и эксплуатация',
-    title: 'DevOps & Infrastructure',
+    title: 'DevOps',
     description:
       'Серверы, контейнеризация, CI/CD, сетевой слой, развёртывание и эксплуатация сервисов.',
 
