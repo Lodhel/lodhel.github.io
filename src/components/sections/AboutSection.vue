@@ -9,7 +9,7 @@ import SectionTitle from '@/components/ui/SectionTitle.vue'
       <SectionTitle eyebrow="Профиль" title="Обо мне" />
       <div class="about__content">
         <div class="about__statement">
-          <span>Backend — фундамент.</span><strong>AI — следующий инженерный слой.</strong>
+          <span>Работаю на всём пути системы.</span><strong>От backend и frontend до инфраструктуры и LLM-решений.</strong>
         </div>
         <div class="about__text">
           <p v-for="paragraph in aboutParagraphs" :key="paragraph">{{ paragraph }}</p>

@@ -1,28 +1,62 @@
 <script setup lang="ts">
 import { engineeringAreas } from '@/data/technologies'
 import SectionTitle from '@/components/ui/SectionTitle.vue'
+import { engineeringAreas } from '@/data/engineeringAreas'
 </script>
 
 <template>
-  <section id="areas" class="section areas decorated-section decorated-section--violet">
+  <section
+    id="areas"
+    class="section areas decorated-section decorated-section--violet"
+  >
     <div v-reveal class="container">
       <SectionTitle
-        eyebrow="Практика"
-        title="Чем я занимаюсь"
-        description="Четыре связанных направления: от прикладного backend до production-контуров вокруг AI-систем."
+        eyebrow="Компетенции"
+        title="Стек и направления"
+        description="Технологии и инструменты, с которыми я работаю в backend, инфраструктуре, AI/LLM и frontend."
       />
+
       <div class="areas__list">
-        <article v-for="area in engineeringAreas" :key="area.number" class="area">
+        <article
+          v-for="area in engineeringAreas"
+          :key="area.number"
+          class="area"
+        >
           <span class="area__number">{{ area.number }}</span>
-          <div>
-            <h3 class="card-title">{{ area.title }}</h3>
-            <p>{{ area.description }}</p>
+
+          <div class="area__content">
+            <span class="area__level">{{ area.level }}</span>
+
+            <h3 class="card-title">
+              {{ area.title }}
+            </h3>
+
+            <p class="area__description">
+              {{ area.description }}
+            </p>
+
+            <div class="area__groups">
+              <div
+                v-for="group in area.groups"
+                :key="group.title"
+                class="area__group"
+              >
+                <h4 class="area__group-title">
+                  {{ group.title }}
+                </h4>
+
+                <ul class="tag-list">
+                  <li
+                    v-for="technology in group.technologies"
+                    :key="technology"
+                    class="tag"
+                  >
+                    {{ technology }}
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <ul class="tag-list">
-            <li v-for="technology in area.technologies" :key="technology" class="tag">
-              {{ technology }}
-            </li>
-          </ul>
         </article>
       </div>
     </div>

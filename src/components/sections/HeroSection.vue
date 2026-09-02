@@ -47,7 +47,6 @@ const photoAvailable = ref(true)
             <small>Добавьте фото в src/assets/profile.jpg</small>
           </div>
           <div class="hero__portrait-overlay"></div>
-          <span class="hero__portrait-index">PROFILE / 01</span>
         </div>
         <div class="hero__marker">
           <span v-for="item in profile.marker" :key="item">{{ item }}</span>
