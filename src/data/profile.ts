@@ -20,9 +20,7 @@ export const contacts: ContactLink[] = [
 export const navigation = [
   { label: 'Обо мне', href: '#about' },
   { label: 'Направления', href: '#areas' },
-  { label: 'Проекты', href: '#projects' },
   { label: 'Достижения', href: '#achievements' },
-  { label: 'Сейчас изучаю', href: '#focus' },
   { label: 'Контакты', href: '#contacts' }
 ]
 

@@ -16,9 +16,6 @@ const photoAvailable = ref(true)
         <p class="hero__role">{{ profile.role }}</p>
         <p class="hero__positioning">{{ profile.positioning }}</p>
         <div class="hero__actions">
-          <a class="button button--primary" href="#projects"
-            >Смотреть проекты <span aria-hidden="true">↓</span></a
-          >
           <a
             v-if="profile.githubUrl"
             class="button"

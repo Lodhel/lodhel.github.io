@@ -4,19 +4,6 @@ export interface ContactLink {
   kind: 'github' | 'telegram' | 'email'
 }
 
-export interface Project {
-  title: string
-  description: string
-  longDescription?: string
-  category: string
-  technologies: string[]
-  githubUrl: string
-  externalUrl: string
-  image?: string
-  featured: boolean
-  year?: string
-}
-
 export interface Achievement {
   title: string
   event: string
@@ -28,10 +15,6 @@ export interface Achievement {
   externalUrl?: string
 }
 
-export interface FocusItem {
-  title: string
-  note: string
-}
 export interface TechnologyGroup {
   title: string
   items: string[]
