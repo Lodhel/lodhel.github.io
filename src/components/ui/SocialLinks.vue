@@ -11,8 +11,8 @@ withDefaults(defineProps<{ compact?: boolean }>(), { compact: false })
         v-if="contact.url"
         class="text-link"
         :href="contact.url"
-        target="_blank"
-        rel="noopener noreferrer"
+        :target="contact.kind === 'email' ? undefined : '_blank'"
+        :rel="contact.kind === 'email' ? undefined : 'noopener noreferrer'"
       >
         {{ contact.label }}<span aria-hidden="true">↗</span>
       </a>

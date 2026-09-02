@@ -6,13 +6,11 @@ export const profile = {
   positioning:
     'В основном занимаюсь backend-разработкой: проектирую сервисы, API и интеграции, работаю с базами данных. Иногда беру на себя frontend, регулярно занимаюсь инфраструктурой и эксплуатацией — Docker, Linux, Nginx, GitLab CI/CD, Proxmox. Параллельно развиваю отдельное направление в LLM, RAG и AI-агентах.',
   photoAlt: 'Роман Татаринов',
-  githubUrl: '',
-  telegramUrl: '',
-  email: ''
+  telegramUrl: 'https://t.me/Lodhel',
+  email: 'lodhelnew@gmail.com'
 }
 
 export const contacts: ContactLink[] = [
-  { label: 'GitHub', url: profile.githubUrl, kind: 'github' },
   { label: 'Telegram', url: profile.telegramUrl, kind: 'telegram' },
   { label: 'Email', url: profile.email ? `mailto:${profile.email}` : '', kind: 'email' }
 ]
@@ -20,8 +18,7 @@ export const contacts: ContactLink[] = [
 export const navigation = [
   { label: 'Обо мне', href: '#about' },
   { label: 'Направления', href: '#areas' },
-  { label: 'Достижения', href: '#achievements' },
-  { label: 'Контакты', href: '#contacts' }
+  { label: 'Достижения', href: '#achievements' }
 ]
 
 export const aboutParagraphs = [

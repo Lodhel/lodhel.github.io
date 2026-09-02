@@ -1,7 +1,7 @@
 export interface ContactLink {
   label: string
   url: string
-  kind: 'github' | 'telegram' | 'email'
+  kind: 'telegram' | 'email'
 }
 
 export interface Achievement {

@@ -230,50 +230,6 @@ svg {
   font-size: clamp(1rem, 1.4vw, 1.15rem);
 }
 
-.button {
-  display: inline-flex;
-  min-height: 48px;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 0 20px;
-  border: 1px solid var(--line-strong);
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.025);
-  color: var(--text);
-  font-size: 0.9rem;
-  font-weight: 700;
-  transition:
-    border-color 180ms ease,
-    background-color 180ms ease,
-    color 180ms ease,
-    transform 180ms ease;
-}
-
-.button:hover {
-  border-color: rgba(143, 227, 194, 0.48);
-  background: rgba(143, 227, 194, 0.07);
-  transform: translateY(-2px);
-}
-.button--primary {
-  border-color: var(--accent);
-  background: var(--accent);
-  color: #07110e;
-}
-.button--primary:hover {
-  border-color: var(--accent-strong);
-  background: var(--accent-strong);
-}
-.button--disabled {
-  cursor: not-allowed;
-  opacity: 0.48;
-}
-.button--disabled:hover {
-  border-color: var(--line-strong);
-  background: rgba(255, 255, 255, 0.025);
-  transform: none;
-}
-
 .text-link {
   display: inline-flex;
   align-items: center;
@@ -334,9 +290,6 @@ svg {
   }
   .section--compact {
     padding-block: 44px;
-  }
-  .button {
-    min-height: 46px;
   }
   .decorated-section {
     --decor-pattern-opacity: 0.1;

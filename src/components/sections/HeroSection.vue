@@ -15,19 +15,6 @@ const photoAvailable = ref(true)
         <h1 class="display-title">{{ profile.name }}</h1>
         <p class="hero__role">{{ profile.role }}</p>
         <p class="hero__positioning">{{ profile.positioning }}</p>
-        <div class="hero__actions">
-          <a
-            v-if="profile.githubUrl"
-            class="button"
-            :href="profile.githubUrl"
-            target="_blank"
-            rel="noopener noreferrer"
-            >GitHub ↗</a
-          >
-          <span v-else class="button button--disabled" title="Добавьте ссылку в src/data/profile.ts"
-            >GitHub ↗</span
-          >
-        </div>
         <SocialLinks compact />
       </div>
 
@@ -109,11 +96,8 @@ const photoAvailable = ref(true)
   color: var(--text-muted);
   font-size: clamp(1rem, 1.5vw, 1.17rem);
 }
-.hero__actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin: 34px 0 24px;
+.hero__content :deep(.social-links) {
+  margin-top: 28px;
 }
 .hero__portrait-wrap {
   position: relative;
@@ -208,10 +192,6 @@ const photoAvailable = ref(true)
   }
   .hero__role {
     line-height: 1.22;
-  }
-  .hero__actions {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
   }
   .hero__portrait-wrap {
     width: calc(100% - 12px);
