@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { engineeringAreas } from '@/data/technologies'
 import SectionTitle from '@/components/ui/SectionTitle.vue'
 import { engineeringAreas } from '@/data/engineeringAreas'
 </script>

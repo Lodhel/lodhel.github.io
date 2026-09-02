@@ -27,8 +27,7 @@ onBeforeUnmount(() => {
   <header class="header">
     <div class="header__inner container">
       <a class="brand" href="#top" aria-label="В начало страницы">
-        <span class="brand__mark">{{ profile.shortName }}</span>
-        <span class="brand__name">Роман Татаринов</span>
+        <span class="brand__name">{{ profile.name }}</span>
       </a>
 
       <nav class="desktop-nav" aria-label="Основная навигация">
@@ -85,20 +84,7 @@ onBeforeUnmount(() => {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
   font-weight: 700;
-}
-.brand__mark {
-  display: grid;
-  width: 34px;
-  height: 34px;
-  place-items: center;
-  border: 1px solid var(--line-strong);
-  border-radius: 8px;
-  color: var(--accent);
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 0.76rem;
-  letter-spacing: 0.05em;
 }
 .brand__name {
   font-size: 0.92rem;

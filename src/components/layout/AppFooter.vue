@@ -6,7 +6,7 @@ import { navigation, profile } from '@/data/profile'
   <footer class="footer">
     <div class="footer__inner container">
       <div>
-        <a class="footer__brand" href="#top">{{ profile.shortName }}<span>.</span></a>
+        <a class="footer__brand" href="#top">{{ profile.name }}<span>.</span></a>
         <p>Backend Engineering · AI / LLM Systems</p>
       </div>
       <nav aria-label="Навигация в подвале">

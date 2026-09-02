@@ -80,102 +80,103 @@ export const engineeringAreas = [
         ]
       },
       {
-          title: 'AWS',
-          technologies: [
-            'EC2',
-            'Amazon Linux',
-            'Amazon Aurora'
-          ]
+        title: 'AWS',
+        technologies: [
+          'EC2',
+          'Amazon Linux',
+          'Amazon Aurora'
+        ]
       },
       {
-          title: 'Сеть и проксирование',
-          technologies: [
-            'Nginx',
-            'Cloudflare',
-            'DNS',
-            'TLS'
-          ]
+        title: 'Сеть и проксирование',
+        technologies: [
+          'Nginx',
+          'Cloudflare',
+          'DNS',
+          'TLS'
+        ]
       },
       {
-        {
-          title: 'CI/CD',
-          technologies: [
-            'GitLab CI/CD',
-            'GitHub Actions'
-          ]
-        }
+        title: 'CI/CD',
+        technologies: [
+          'GitLab CI/CD',
+          'GitHub Actions'
+        ]
       },
       {
-          title: 'Управление агентами',
-          technologies: [
-            'Hermes'
-          ]
+        title: 'Управление агентами',
+        technologies: [
+          'Hermes'
+        ]
       }
     ]
   },
 
   {
     number: '03',
+    level: 'AI Engineering',
     title: 'AI / LLM',
     description:
-    'LLM-приложения, RAG, агентные системы и всё, что связано с их архитектурой и интеграцией в продукт.',
+      'LLM-приложения, RAG, агентные системы и всё, что связано с их архитектурой и интеграцией в продукт.',
 
     groups: [
       {
-          title: 'LLM',
-          technologies: [
-            'Context Engineering',
-            'Оценка качества'
-          ]
-        },
-        {
-          title: 'RAG',
-          technologies: [
-            'Retrieval',
-            'Векторный поиск',
-            'Chunking'
-          ]
-        },
-        {
-          title: 'AI-агенты',
-          technologies: [
-            'Tool Calling',
-            'Оркестрация',
-            'Мультиагентные системы',
-            'MCP'
-          ]
-        },
+        title: 'LLM',
+        technologies: [
+          'Context Engineering',
+          'Оценка качества'
+        ]
+      },
+      {
+        title: 'RAG',
+        technologies: [
+          'Retrieval',
+          'Векторный поиск',
+          'Chunking'
+        ]
+      },
+      {
+        title: 'AI-агенты',
+        technologies: [
+          'Tool Calling',
+          'Оркестрация',
+          'Мультиагентные системы',
+          'MCP'
+        ]
+      }
+    ]
+  },
 
   {
-      number: '04',
-      level: 'Смежный опыт',
-      title: 'Frontend',
-      description:
-        'Работал и с клиентской частью приложений — от классического JavaScript и jQuery до современных Vue и React.',
+    number: '04',
+    level: 'Смежный опыт',
+    title: 'Frontend',
+    description:
+      'Работал и с клиентской частью приложений — от классического JavaScript и jQuery до современных Vue и React.',
 
-      groups: [
-        {
-          title: 'Язык',
-          technologies: [
-            'JavaScript'
-          ]
-        },
-        {
-          title: 'Фреймворки и библиотеки',
-          technologies: [
-            'Vue',
-            'React',
-            'jQuery'
-          ]
-        },
-        {
-          title: 'Разметка и стили',
-          technologies: [
-            'HTML',
-            'CSS',
-            'Bootstrap'
-          ]
-        }
-      ]
-    }
+    groups: [
+      {
+        title: 'Язык',
+        technologies: [
+          'JavaScript'
+        ]
+      },
+      {
+        title: 'Фреймворки и библиотеки',
+        technologies: [
+          'Vue',
+          'React',
+          'jQuery'
+        ]
+      },
+      {
+        title: 'Разметка и стили',
+        technologies: [
+          'HTML',
+          'CSS',
+          'Bootstrap'
+        ]
+      }
+    ]
+  }
 ]

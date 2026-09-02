@@ -43,13 +43,9 @@ const photoAvailable = ref(true)
             @error="photoAvailable = false"
           />
           <div v-else class="hero__placeholder">
-            <span>{{ profile.shortName }}</span>
-            <small>Добавьте фото в src/assets/profile.jpg</small>
+            <small>Фотография недоступна</small>
           </div>
           <div class="hero__portrait-overlay"></div>
-        </div>
-        <div class="hero__marker">
-          <span v-for="item in profile.marker" :key="item">{{ item }}</span>
         </div>
       </div>
     </div>
@@ -171,39 +167,8 @@ const photoAvailable = ref(true)
   color: var(--text-dim);
   text-align: center;
 }
-.hero__placeholder span {
-  color: var(--accent);
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 4rem;
-}
 .hero__placeholder small {
   max-width: 210px;
-}
-.hero__marker {
-  position: absolute;
-  right: -20px;
-  bottom: 28px;
-  display: flex;
-  max-width: 250px;
-  flex-wrap: wrap;
-  gap: 5px 12px;
-  padding: 14px 16px;
-  border: 1px solid var(--line-strong);
-  border-radius: 10px;
-  background: rgba(13, 17, 23, 0.88);
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.28);
-  backdrop-filter: blur(14px);
-}
-.hero__marker span {
-  color: #c0ccd5;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 600;
-}
-.hero__marker span:not(:last-child)::after {
-  margin-left: 12px;
-  color: var(--accent);
-  content: '·';
 }
 .hero__footnote {
   display: flex;
@@ -253,11 +218,6 @@ const photoAvailable = ref(true)
   }
   .hero__portrait-wrap {
     width: calc(100% - 12px);
-  }
-  .hero__marker {
-    right: -12px;
-    bottom: 20px;
-    max-width: 220px;
   }
   .hero__footnote {
     margin-top: 50px;
