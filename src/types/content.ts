@@ -14,8 +14,3 @@ export interface Achievement {
   certificateImage?: string
   externalUrl?: string
 }
-
-export interface TechnologyGroup {
-  title: string
-  items: string[]
-}

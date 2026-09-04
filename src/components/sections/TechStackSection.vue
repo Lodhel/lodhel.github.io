@@ -1,12 +1,17 @@
 <script setup lang="ts">
-import { technologies } from '@/data/technologies'
+import { engineeringAreas } from '@/data/engineeringAreas'
 import SectionTitle from '@/components/ui/SectionTitle.vue'
+
+const technologies = engineeringAreas.map((area) => ({
+  title: area.title,
+  items: [...new Set(area.groups.flatMap((group) => group.technologies))]
+}))
 </script>
 
 <template>
   <section class="section section--compact tech-stack decorated-section decorated-section--violet">
     <div v-reveal class="container">
-      <SectionTitle eyebrow="Toolbox" title="Технологии" />
+      <SectionTitle eyebrow="Технологии" />
       <div class="tech-stack__grid">
         <article v-for="group in technologies" :key="group.title">
           <h3>{{ group.title }}</h3>

@@ -16,8 +16,7 @@ const selectedAchievement = ref<Achievement | null>(null)
   >
     <div v-reveal class="container">
       <SectionTitle
-        eyebrow="Recognition"
-        title="Достижения"
+        eyebrow="Достижения"
         description="Соревнования — один из способов проверять инженерные решения в условиях ограниченного времени и высокой плотности задач."
       />
       <div class="achievements">

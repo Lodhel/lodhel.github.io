@@ -211,7 +211,6 @@ svg {
 }
 
 .display-title,
-.section-title,
 .card-title {
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
@@ -219,10 +218,6 @@ svg {
   line-height: 1.04;
 }
 
-.section-title {
-  max-width: 760px;
-  font-size: clamp(2.1rem, 4vw, 3.6rem);
-}
 .section-copy {
   max-width: 690px;
   margin: 22px 0 0;

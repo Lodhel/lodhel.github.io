@@ -11,7 +11,6 @@ import { engineeringAreas } from '@/data/engineeringAreas'
     <div v-reveal class="container">
       <SectionTitle
         eyebrow="Компетенции"
-        title="Стек и направления"
         description="Технологии и инструменты, с которыми я работаю в backend, инфраструктуре, AI/LLM и frontend."
       />
 
@@ -88,11 +87,11 @@ import { engineeringAreas } from '@/data/engineeringAreas'
   background: var(--surface);
   transition:
     border-color 220ms ease,
-    transform 220ms ease;
+    box-shadow 220ms ease;
 }
 .area-card:hover {
   border-color: var(--line-strong);
-  transform: translateY(-4px);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.16);
 }
 .area-card__visual {
   position: relative;
@@ -129,6 +128,7 @@ import { engineeringAreas } from '@/data/engineeringAreas'
   border: 2px solid var(--accent);
   border-radius: 50%;
   background: #0d1319;
+  animation: diagram-node-pulse 3.8s ease-in-out infinite;
 }
 .area-card__diagram span:nth-child(1) {
   top: 28%;
@@ -139,10 +139,12 @@ import { engineeringAreas } from '@/data/engineeringAreas'
   left: 63%;
   width: 15px;
   height: 15px;
+  animation-delay: -1.25s;
 }
 .area-card__diagram span:nth-child(3) {
   top: 70%;
   left: 38%;
+  animation-delay: -2.5s;
 }
 .area-card__diagram i {
   position: absolute;
@@ -151,14 +153,17 @@ import { engineeringAreas } from '@/data/engineeringAreas'
   width: 38%;
   height: 1px;
   background: linear-gradient(90deg, var(--accent), rgba(143, 227, 194, 0.15));
+  background-size: 220% 100%;
   transform: rotate(18deg);
   transform-origin: left;
+  animation: diagram-line-flow 4.4s ease-in-out infinite;
 }
 .area-card__diagram i:last-child {
   top: 67%;
   left: 39%;
   width: 27%;
   transform: rotate(-44deg);
+  animation-delay: -2.2s;
 }
 .area-card__category {
   position: absolute;
@@ -209,6 +214,34 @@ import { engineeringAreas } from '@/data/engineeringAreas'
   font-weight: 700;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+}
+@keyframes diagram-node-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(143, 227, 194, 0.08);
+    transform: scale(0.92);
+  }
+  50% {
+    box-shadow: 0 0 0 9px rgba(143, 227, 194, 0.04);
+    transform: scale(1.12);
+  }
+}
+@keyframes diagram-line-flow {
+  0%,
+  100% {
+    background-position: 100% 50%;
+    opacity: 0.45;
+  }
+  50% {
+    background-position: 0 50%;
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .area-card__diagram span,
+  .area-card__diagram i {
+    animation: none;
+  }
 }
 @media (max-width: 760px) {
   .area-card {

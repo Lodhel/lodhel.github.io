@@ -1,11 +1,10 @@
 <script setup lang="ts">
-defineProps<{ eyebrow: string; title: string; description?: string }>()
+defineProps<{ eyebrow: string; description?: string }>()
 </script>
 
 <template>
   <header class="section-heading">
-    <p class="eyebrow">{{ eyebrow }}</p>
-    <h2 class="section-title">{{ title }}</h2>
+    <h2 class="eyebrow">{{ eyebrow }}</h2>
     <p v-if="description" class="section-copy">{{ description }}</p>
   </header>
 </template>

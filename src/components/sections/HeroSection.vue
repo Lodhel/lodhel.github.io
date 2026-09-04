@@ -33,9 +33,6 @@ const photoAvailable = ref(true)
         </div>
       </div>
     </div>
-    <div class="hero__footnote container">
-      <span>Backend foundation</span><i></i><span>AI-native systems</span>
-    </div>
   </section>
 </template>
 
@@ -45,8 +42,7 @@ const photoAvailable = ref(true)
   padding: clamp(64px, 9vw, 120px) 0 34px;
   border-bottom: 1px solid rgba(143, 191, 244, 0.11);
 }
-.hero__grid,
-.hero__footnote {
+.hero__grid {
   position: relative;
   z-index: 2;
 }
@@ -151,22 +147,6 @@ const photoAvailable = ref(true)
 .hero__placeholder small {
   max-width: 210px;
 }
-.hero__footnote {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: clamp(48px, 7vw, 86px);
-  color: var(--text-dim);
-  font-size: 0.63rem;
-  font-weight: 700;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-}
-.hero__footnote i {
-  width: 80px;
-  height: 1px;
-  background: var(--line-strong);
-}
 @media (max-width: 900px) {
   .hero {
     padding-top: 70px;
@@ -195,9 +175,6 @@ const photoAvailable = ref(true)
   }
   .hero__portrait-wrap {
     width: calc(100% - 12px);
-  }
-  .hero__footnote {
-    margin-top: 50px;
   }
 }
 </style>

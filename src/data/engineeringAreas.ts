@@ -123,22 +123,21 @@ export const engineeringAreas = [
       {
         title: 'LLM',
         technologies: [
-          'Context Engineering',
-          'Оценка качества'
+            'Интеграция и обучение моделей',
+            'Оценка качества'
         ]
       },
       {
         title: 'RAG',
         technologies: [
-          'Retrieval',
-          'Векторный поиск',
-          'Chunking'
-        ]
+            'Эмбеддинги',
+            'Векторный поиск',
+            'Работа с контекстом'
+          ]
       },
       {
         title: 'AI-агенты',
         technologies: [
-          'Tool Calling',
           'Оркестрация',
           'Мультиагентные системы',
           'MCP'
