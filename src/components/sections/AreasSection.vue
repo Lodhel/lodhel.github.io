@@ -22,39 +22,7 @@ import { engineeringAreas } from '@/data/engineeringAreas'
         >
           <div class="area-card__visual" :data-index="area.number">
             <div class="area-card__diagram" aria-hidden="true">
-              <svg viewBox="0 0 600 360" focusable="false">
-                <g class="diagram-network">
-                  <path class="diagram-edge" d="M150 95 C230 105 300 135 380 175" />
-                  <path class="diagram-edge" d="M380 175 C340 230 285 255 230 265" />
-                  <path class="diagram-edge" d="M150 95 C140 185 170 240 230 265" />
-
-                  <path
-                    class="diagram-signal diagram-signal--one"
-                    d="M150 95 C230 105 300 135 380 175"
-                  />
-                  <path
-                    class="diagram-signal diagram-signal--two"
-                    d="M380 175 C340 230 285 255 230 265"
-                  />
-                  <path
-                    class="diagram-signal diagram-signal--three"
-                    d="M150 95 C140 185 170 240 230 265"
-                  />
-
-                  <g class="diagram-node diagram-node--one">
-                    <circle class="diagram-node-ring" cx="150" cy="95" r="18" />
-                    <circle class="diagram-node-core" cx="150" cy="95" r="8" />
-                  </g>
-                  <g class="diagram-node diagram-node--two">
-                    <circle class="diagram-node-ring" cx="380" cy="175" r="23" />
-                    <circle class="diagram-node-core" cx="380" cy="175" r="11" />
-                  </g>
-                  <g class="diagram-node diagram-node--three">
-                    <circle class="diagram-node-ring" cx="230" cy="265" r="18" />
-                    <circle class="diagram-node-core" cx="230" cy="265" r="8" />
-                  </g>
-                </g>
-              </svg>
+              <span></span><span></span><span></span><i></i><i></i>
             </div>
             <span class="area-card__category">{{ area.level }}</span>
           </div>
@@ -151,109 +119,68 @@ import { engineeringAreas } from '@/data/engineeringAreas'
 .area-card__diagram {
   position: absolute;
   inset: 0;
-  overflow: hidden;
   background: radial-gradient(circle at 50% 50%, rgba(143, 227, 194, 0.08), transparent 48%);
 }
-.area-card__diagram::before {
+.area-card__diagram span {
   position: absolute;
-  top: 16%;
-  left: 22%;
-  width: 46%;
-  aspect-ratio: 1;
+  width: 11px;
+  height: 11px;
+  border: 2px solid var(--accent);
   border-radius: 50%;
-  background: rgba(92, 177, 217, 0.09);
-  filter: blur(42px);
-  content: '';
-  animation: diagram-glow-drift 7s ease-in-out infinite;
-}
-.area-card__diagram svg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-.diagram-network {
-  transform-box: view-box;
+  background: #0d1319;
   transform-origin: center;
-  animation: diagram-network-float 7.5s ease-in-out infinite;
+  animation: diagram-node-pulse 2.7s ease-in-out infinite;
+  will-change: transform, box-shadow;
 }
-.diagram-edge,
-.diagram-signal {
-  fill: none;
-  stroke-linecap: round;
+.area-card__diagram span:nth-child(1) {
+  top: 28%;
+  left: 25%;
 }
-.diagram-edge {
-  stroke: rgba(143, 227, 194, 0.28);
-  stroke-width: 2;
+.area-card__diagram span:nth-child(2) {
+  top: 48%;
+  left: 63%;
+  width: 15px;
+  height: 15px;
+  animation-delay: -0.9s;
 }
-.diagram-signal {
-  stroke: var(--accent-strong);
-  stroke-width: 3;
-  stroke-dasharray: 12 62;
-  filter: drop-shadow(0 0 5px rgba(143, 227, 194, 0.75));
-  animation: diagram-signal-flow 2.8s linear infinite;
-}
-.diagram-signal--two {
-  animation-delay: -0.95s;
-}
-.diagram-signal--three {
-  animation-delay: -1.9s;
-}
-.diagram-node {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: diagram-node-drift 4.8s ease-in-out infinite;
-}
-.diagram-node--one {
-  --node-x: -5px;
-  --node-y: 4px;
-}
-.diagram-node--two {
-  --node-x: 6px;
-  --node-y: -5px;
-  animation-delay: -1.6s;
-}
-.diagram-node--three {
-  --node-x: 4px;
-  --node-y: 6px;
-  animation-delay: -3.2s;
-}
-.diagram-node-core {
-  fill: #0d1319;
-  stroke: var(--accent);
-  stroke-width: 3;
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: diagram-core-pulse 2.4s ease-in-out infinite;
-}
-.diagram-node--two .diagram-node-core {
-  animation-delay: -0.8s;
-}
-.diagram-node--three .diagram-node-core {
-  animation-delay: -1.6s;
-}
-.diagram-node-ring {
-  fill: none;
-  stroke: var(--accent);
-  stroke-width: 2;
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: diagram-ring-pulse 2.4s ease-out infinite;
-}
-.diagram-node--two .diagram-node-ring {
-  animation-delay: -0.8s;
-}
-.diagram-node--three .diagram-node-ring {
-  animation-delay: -1.6s;
-}
-.area-card:nth-child(2) .diagram-network {
+.area-card__diagram span:nth-child(3) {
+  top: 70%;
+  left: 38%;
   animation-delay: -1.8s;
 }
-.area-card:nth-child(3) .diagram-network {
-  animation-delay: -3.6s;
+.area-card__diagram i {
+  position: absolute;
+  top: 39%;
+  left: 28%;
+  width: 38%;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent), rgba(143, 227, 194, 0.15));
+  transform: rotate(18deg);
+  transform-origin: left;
 }
-.area-card:nth-child(4) .diagram-network {
-  animation-delay: -5.4s;
+.area-card__diagram i:last-child {
+  top: 67%;
+  left: 39%;
+  width: 27%;
+  transform: rotate(-44deg);
+}
+.area-card__diagram i::after {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 28%;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, var(--accent-strong), transparent);
+  box-shadow: 0 0 8px rgba(143, 227, 194, 0.8);
+  content: '';
+  opacity: 0;
+  transform: translateX(-120%);
+  animation: diagram-signal-flow 2.5s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+.area-card__diagram i:last-child::after {
+  animation-delay: -1.25s;
 }
 .area-card__category {
   position: absolute;
@@ -305,73 +232,46 @@ import { engineeringAreas } from '@/data/engineeringAreas'
   letter-spacing: 0.09em;
   text-transform: uppercase;
 }
-@keyframes diagram-glow-drift {
+@keyframes diagram-node-pulse {
   0%,
   100% {
-    opacity: 0.55;
-    transform: translate3d(-8%, -4%, 0) scale(0.88);
+    box-shadow: 0 0 0 0 rgba(143, 227, 194, 0);
+    transform: scale(1);
   }
-  50% {
-    opacity: 1;
-    transform: translate3d(18%, 10%, 0) scale(1.18);
+  42% {
+    box-shadow:
+      0 0 0 8px rgba(143, 227, 194, 0.13),
+      0 0 20px rgba(143, 227, 194, 0.65);
+    transform: scale(1.35);
   }
-}
-@keyframes diagram-network-float {
-  0%,
-  100% {
-    transform: translate3d(-4px, 3px, 0) rotate(-0.5deg);
-  }
-  50% {
-    transform: translate3d(6px, -5px, 0) rotate(0.7deg);
-  }
-}
-@keyframes diagram-node-drift {
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(var(--node-x), var(--node-y));
-  }
-}
-@keyframes diagram-core-pulse {
-  0%,
-  100% {
-    filter: drop-shadow(0 0 2px rgba(143, 227, 194, 0.45));
-    transform: scale(0.88);
-  }
-  50% {
-    filter: drop-shadow(0 0 11px rgba(143, 227, 194, 0.95));
-    transform: scale(1.2);
-  }
-}
-@keyframes diagram-ring-pulse {
-  0% {
-    opacity: 0.7;
-    transform: scale(0.55);
-  }
-  75%,
-  100% {
-    opacity: 0;
-    transform: scale(1.55);
+  68% {
+    box-shadow: 0 0 0 0 rgba(143, 227, 194, 0);
+    transform: scale(1);
   }
 }
 @keyframes diagram-signal-flow {
-  to {
-    stroke-dashoffset: -74;
+  0% {
+    opacity: 0;
+    transform: translateX(-120%);
+  }
+  18% {
+    opacity: 1;
+  }
+  78% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(360%);
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .area-card__diagram::before,
-  .diagram-network,
-  .diagram-node,
-  .diagram-node-core,
-  .diagram-node-ring,
-  .diagram-signal {
+  .area-card__diagram span,
+  .area-card__diagram i::after {
     animation: none;
   }
-  .diagram-node-ring {
-    opacity: 0.3;
+  .area-card__diagram i::after {
+    opacity: 0;
   }
 }
 @media (max-width: 760px) {
