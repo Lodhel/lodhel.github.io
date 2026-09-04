@@ -266,12 +266,13 @@ import { engineeringAreas } from '@/data/engineeringAreas'
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .area-card__diagram span,
-  .area-card__diagram i::after {
-    animation: none;
+  .area-card__diagram span {
+    animation-duration: 2.7s !important;
+    animation-iteration-count: infinite !important;
   }
   .area-card__diagram i::after {
-    opacity: 0;
+    animation-duration: 2.5s !important;
+    animation-iteration-count: infinite !important;
   }
 }
 @media (max-width: 760px) {
