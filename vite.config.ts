@@ -9,21 +9,7 @@ const base = process.env.VITE_BASE_PATH || '/'
 export default defineConfig({
   // '/' для profile pages; workflow передаёт '/REPOSITORY/' для project pages.
   base,
-  plugins: [
-    vue(),
-    {
-      name: 'canonical-link',
-      transformIndexHtml: {
-        order: 'post',
-        handler(html) {
-          return html.replace(
-            '<!-- canonical-link -->',
-            `<link rel="canonical" href="${base}" />`
-          )
-        }
-      }
-    }
-  ],
+  plugins: [vue()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

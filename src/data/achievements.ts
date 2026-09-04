@@ -1,11 +1,10 @@
 import type { Achievement } from '@/types/content'
-
-const biometricsCertificate = new URL('../assets/certificates/1.pdf', import.meta.url).href
-const greenCodeCertificate = new URL('../assets/certificates/2.jpg', import.meta.url).href
-const innovationCentersCertificate = new URL('../assets/certificates/3.pdf', import.meta.url).href
-const lctCertificate = new URL('../assets/certificates/4.pdf', import.meta.url).href
-const hackAndChangeCertificate = new URL('../assets/certificates/5.pdf', import.meta.url).href
-const strongIdeasCertificate = new URL('../assets/certificates/6.png', import.meta.url).href
+import biometricsCertificate from '@/assets/certificates/1.pdf'
+import greenCodeCertificate from '@/assets/certificates/2.jpg'
+import innovationCentersCertificate from '@/assets/certificates/3.pdf'
+import lctCertificate from '@/assets/certificates/4.pdf'
+import hackAndChangeCertificate from '@/assets/certificates/5.pdf'
+import strongIdeasCertificate from '@/assets/certificates/6.png'
 
 export const achievements: Achievement[] = [
   {
@@ -23,7 +22,9 @@ export const achievements: Achievement[] = [
     result: '1 место',
     year: '2024',
     description: 'Разработка решения для цифровой инвентаризации зелёных насаждений Москвы.',
-    certificateImage: greenCodeCertificate
+    certificateImage: greenCodeCertificate,
+    certificateImageWidth: 763,
+    certificateImageHeight: 1066
   },
   {
     title: 'Форум инновационных центров',
@@ -59,6 +60,8 @@ export const achievements: Achievement[] = [
     description:
       'Цифровая платформа для восстановления лесов и управления зелёными насаждениями в России.',
     organizers: 'АСИ · Росконгресс',
-    certificateImage: strongIdeasCertificate
+    certificateImage: strongIdeasCertificate,
+    certificateImageWidth: 1664,
+    certificateImageHeight: 1170
   }
 ]

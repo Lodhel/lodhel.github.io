@@ -5,7 +5,8 @@ export const profile = {
   role: 'Software Engineer · Backend · DevOps · AI / LLM',
   positioning:
     'В основном занимаюсь backend-разработкой: проектирую сервисы, API и интеграции, работаю с базами данных. Иногда беру на себя frontend, регулярно занимаюсь инфраструктурой и эксплуатацией — Docker, Linux, Nginx, GitLab CI/CD, Proxmox. Параллельно развиваю отдельное направление в LLM, RAG и AI-агентах.',
-  photoAlt: 'Роман Татаринов',
+  photoUrl: `${import.meta.env.BASE_URL}roman-tatarinov.jpg`,
+  photoAlt: 'Роман Татаринов — Python Backend и AI Engineer',
   telegramUrl: 'https://t.me/Lodhel',
   email: 'lodhelnew@gmail.com'
 }

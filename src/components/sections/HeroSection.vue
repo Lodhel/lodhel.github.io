@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import profilePhoto from '@/assets/profile.jpg'
 import { profile } from '@/data/profile'
 import SocialLinks from '@/components/ui/SocialLinks.vue'
 
@@ -22,8 +21,12 @@ const photoAvailable = ref(true)
         <div class="hero__portrait">
           <img
             v-if="photoAvailable"
-            :src="profilePhoto"
+            :src="profile.photoUrl"
             :alt="profile.photoAlt"
+            width="1280"
+            height="960"
+            fetchpriority="high"
+            decoding="async"
             @error="photoAvailable = false"
           />
           <div v-else class="hero__placeholder">

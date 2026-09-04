@@ -60,7 +60,14 @@ onBeforeUnmount(() => {
                 <a :href="achievement.certificateImage" target="_blank">Открыть файл</a>
               </p>
             </object>
-            <img v-else :src="achievement.certificateImage" :alt="`Диплом: ${achievement.title}`" />
+            <img
+              v-else
+              :src="achievement.certificateImage"
+              :alt="`Диплом: ${achievement.title}`"
+              :width="achievement.certificateImageWidth"
+              :height="achievement.certificateImageHeight"
+              decoding="async"
+            />
           </div>
           <a
             class="modal__external"

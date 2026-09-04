@@ -12,5 +12,7 @@ export interface Achievement {
   description: string
   organizers?: string
   certificateImage?: string
+  certificateImageWidth?: number
+  certificateImageHeight?: number
   externalUrl?: string
 }

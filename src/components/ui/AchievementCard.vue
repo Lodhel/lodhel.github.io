@@ -17,7 +17,15 @@ const isPdf = computed(() => props.achievement.certificateImage?.toLowerCase().i
       :aria-label="`Открыть диплом: ${achievement.title}`"
       @click="$emit('openCertificate', achievement)"
     >
-      <img v-if="!isPdf" :src="achievement.certificateImage" alt="" loading="lazy" />
+      <img
+        v-if="!isPdf"
+        :src="achievement.certificateImage"
+        :alt="`Превью диплома: ${achievement.title}`"
+        :width="achievement.certificateImageWidth"
+        :height="achievement.certificateImageHeight"
+        loading="lazy"
+        decoding="async"
+      />
       <div v-else class="achievement-card__pdf" aria-hidden="true">
         <span>PDF</span><i></i><i></i><i></i>
       </div>
